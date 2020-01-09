@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="TDF-8">
+    <title>TypingTester</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap\css\bootstrap.css">
+    <link rel="stylesheet" href="bootstrap\css\mdb.css">
+	
+	
+    <link rel="stylesheet" href="14_styles.css">
+    <link rel=icon type="image/jpg" href="brand.jpg">
+</head>
+<body>
+
+<audio id="clap-sound">
+    <source src="sounds/clap.wav" type="audio/wav">
+</audio>
+
+<audio id="congrats-sound">
+    <source src="sounds/congrats.wav" type="audio/wav">
+</audio>
+
+<!-- MAIN HEADER -->
+<header class="main-header">
+    <h3>Typing Tester App </h1>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="col-md-9 mt-3">
+            <div class="card t-card">
+                <div class="card-body">
+                    <section class="side-1-section">
+                        <section class="text-section">
+                            <div class="text-section-div">
+                                <p id="original-text">Welcome for Learning....</p>
+                            </div>
+                        </section>
+
+                        <br>
+                        <section class="text-area-section">
+                            <div class="text-area-div">
+                                <!-- Disable Paste Option -->
+                                <textarea onpaste="return false" id="text-area" rows="4" cols="53" placeholder="The Clock starts when you starts typing.."></textarea>
+                            </div>
+                        </section>
+
+                        <br>
+                        <section class="result-section">
+                            <div class="result-section-div">
+                        <span class="timer">
+                            <span id="minutes">00</span> Minutes
+                            <span id="seconds">00</span> Seconds
+                            <span id="m-seconds">00</span> Milli Seconds
+                        </span>
+                                <div>
+                                    <button type="button" id="reset">Reset</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Congratulations Section -->
+                        <section class="cong-section">
+                            <div class="cong-section-div">
+                                <p>Congratulations !!</p>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mt-4">
+            <section class="side-2-section">
+                <button class="btn btn-primary btn-block mt-2" onclick="changeText(0)"><b>Level 1</b></button>
+                <button class="btn btn-success btn-block mt-2" onclick="changeText(1)"><b>Level 2</b></button>
+                <button class="btn btn-warning btn-block mt-2" onclick="changeText(2)"><b>Level 3</b></button>
+                <button class="btn btn-danger btn-block mt-2" onclick="changeText(3)"><b>Level 4</b></button>
+                <button class="btn btn-indigo btn-block mt-2" onclick="changeText(4)"><b>Level 5</b></button>
+                <button class="btn btn-pink btn-block mt-2" onclick="changeText(5)"><b>Level 6</b></button>
+                <button class="btn btn-purple btn-block mt-2" onclick="changeText(6)"><b>Level 7</b></button>
+                <button class="btn btn-secondary btn-block mt-2" onclick="changeText(7)"><b>Level 8</b></button>
+                <button class="btn btn-primary btn-block mt-2" onclick="changeText(8)"><b>Level 9</b></button>
+                <button class="btn btn-success btn-block mt-2" onclick="changeText(9)"><b>Level 10</b></button>
+            </section>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="card-deck">
+            <div class="card">
+            <a href="#">
+                <img src="img/image1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Simple Typing Skills</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quibusdam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, facere!</p>
+                </div>
+                </a>
+            </div>
+            
+            <div class="card">
+            <a href="#">
+                <img src="img/image2.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Medium Typing Skills</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quibusdam.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+            <a href="#">
+                <img src="img/image3.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Train Typing Skills</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quibusdam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+            <a href="#">
+                <img src="img/image4.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Expertise Typing Skills</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quibusdam.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="card-deck">
+                    <div class="card">
+                    <a href="#">
+                        <img src="img/image5.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Want a Keyboarding Curriculum that Works? Here You Go!</h5>
+                            <p class="card-text">Get this: keyboarding helps students learn the alphabet! As a technology teacher, I see roughly 500 K-5 students for 40 minutes a week. While kids may be a wiz on a tablet or a touchscreen device, I’ve discovered many of them have never used a keyboard or managed a mouse. So that’s where I start.
+
+                                I use TypeTastic with my K-2 students, and there’s no doubt the gamification of learning a new skill works. With my kindergartners, (and even some 1st-graders) I start off with Keyboard Builder, Cupcake Bugs, and Frog Pond Patrol.
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aspernatur aut dolorum ducimus est impedit nihil, officia perspiciatis quos recusandae sed temporibus, vitae voluptatem!</p>
+                            </p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                    <a href="#">
+                        <img src="img/image6.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Increase Your Typing Speed</h5>
+                            <p class="card-text">We all know that typing speed matters. Whether you’re applying for a job as a paralegal or an executive assistant, being able to type quickly and accurately might be the only skill that stands between you and another equally qualified applicant. Can you type 65+ words per minute? If you didn’t have the benefit of taking a typing course or two in school, that might not be the case. So, how do you get those skills up to par in a short period of time so that you can compete for these high paying positions? We don’t guarantee overnight results but, with practice you’ll definitely get a leg up on the competition.</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <h3>Copyright &copy; 2019 <a href="https://github.com/rahulkumardeveloper" id="github" target="_blank">Rahuldeveloper</a></h3>
+    <p>All Rights Reserved</p>
+    <small>Developed & Maintained by Rahul Kumar</small>
+</footer>
+
+<script src="14_script.js"></script>
+</body>
+</html>

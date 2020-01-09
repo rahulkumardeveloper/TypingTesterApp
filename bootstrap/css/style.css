@@ -1,0 +1,43 @@
+/* Your custom styles */
+.bg-teal{
+    background-color: teal;
+}
+.btn{
+    font-size: 30px;
+    padding: 0.1rem 1.5rem;
+}
+input{
+    font-size: 18px;
+    height: 45px !important;
+}
+
+.btn-primary , .bg-primary{
+    background: linear-gradient(45deg,black,dodgerblue);
+}
+.btn-success , .bg-success{
+    background: linear-gradient(45deg,black,limegreen);
+}
+.btn-warning , .bg-warning{
+    background: linear-gradient(45deg,black,orange);
+}
+.btn-danger , .bg-danger{
+    background: linear-gradient(45deg,black,red);
+}
+.btn-secondary , .bg-secondary{
+    background: linear-gradient(45deg,black,purple);
+}
+.btn-info , .bg-info{
+    background: linear-gradient(45deg,black,lightskyblue);
+}
+.btn-dark , .bg-dark{
+    background: linear-gradient(45deg,black,darkslategray);
+}
+.btn-teal , .bg-teal{
+    background-color: #002222;
+}
+.btn-light , .bg-light{
+    background: linear-gradient(45deg,darkgray,gray);
+}
+.text-teal{
+    color: #002222;
+}
